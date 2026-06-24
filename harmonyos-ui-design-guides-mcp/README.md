@@ -2,13 +2,15 @@
 
 把鸿蒙 UI 设计指南(166 篇,设计规范/视觉风格/控件设计/交互/多设备适配)封装成 MCP 检索服务,供 Claude Code / opencode / Cursor / Cline 等客户端在开发时查设计规范。**文档随包发布,装包即用、零配置。**
 
-与姊妹项目分工:
-- **本服务(ui-design-guides)**:查**设计怎么做**(视觉/交互/控件设计规范)
-- [`harmonyos-guides-mcp`](https://github.com/2351548518/harmonyos-guides-mcp):查 **API 用法**(代码层面)
-- [`harmonyos-api-references-mcp`](https://github.com/2351548518/harmonyos-api-references-mcp):查**接口精确定义**
-- [`harmonyos-best-practices-mcp`](https://github.com/2351548518/harmonyos-best-practices-mcp):查**场景最佳实践 + 参考代码**
+与姊妹项目分工互补:
 
-配合:先本服务定设计规范,再用 guides/api-references 查实现该设计的 API。
+| | 本项目(ui-design-guides) | guides | api-references | best-practices |
+|---|---|---|---|---|
+| 查什么 | **设计怎么做**(视觉/交互/控件设计规范) | **API 用法、调用流程** | **接口精确定义**(参数/枚举) | **场景最佳实践 + 参考代码** |
+| 数据 | 166 篇设计指南 | 5489 篇指南 | 4495 篇 API 参考 | 452 篇 + 186 代码仓库 |
+| 适用 | "底部页签设计规范" | "AVPlayer 怎么初始化" | "AudioCapturer 方法签名" | "长列表丢帧优化" |
+
+四者并列:ui-design-guides 定设计规范、guides 讲 API 用法、api-references 查精确签名、best-practices 给场景实践与参考代码。
 
 ## 提供的工具
 
@@ -19,6 +21,33 @@
 | `list_design_guides_by_topic({topic?})` | 按分类路径浏览;支持多级下钻(如 `控件` → `控件 / 导航类`) |
 
 数据规模:166 篇设计指南,9 个顶级类——控件(49)、针对多设备设计(26)、通用设计基础(23)、系统特性&能力(22)、应用设计最佳实践(14)、元服务设计(12)、人机交互(11)、应用 UX 体验标准(8)、变更说明(1)。
+
+## 四者并列使用(opencode 示例)
+
+```json
+{
+  "mcp": {
+    "harmonyos-best-practices": {
+      "type": "local",
+      "command": ["npx", "-y", "harmonyos-best-practices-mcp"]
+    },
+    "harmonyos-guides": {
+      "type": "local",
+      "command": ["npx", "-y", "harmonyos-guides-mcp"]
+    },
+    "harmonyos-api-references": {
+      "type": "local",
+      "command": ["npx", "-y", "harmonyos-api-references-mcp"]
+    },
+    "harmonyos-ui-design-guides": {
+      "type": "local",
+      "command": ["npx", "-y", "harmonyos-ui-design-guides-mcp"]
+    }
+  }
+}
+```
+
+搭配各自的 Skill(`harmonyos-best-practices` / `harmonyos-guides` / `harmonyos-api-references` / `harmonyos-ui-design-guides`),AI 可据需求选用:guides 查 API 用法、best-practices 查场景实践与参考代码、api-references 查精确签名、ui-design-guides 查设计规范。
 
 ## 安装(最终用户)
 

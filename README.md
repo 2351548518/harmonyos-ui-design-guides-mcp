@@ -16,9 +16,36 @@
 |---|---|---|---|---|
 | 查什么 | **设计怎么做**(视觉/交互/控件设计规范) | **API 用法、调用流程** | **接口精确定义**(参数/枚举) | **场景最佳实践 + 参考代码** |
 | 数据 | 166 篇设计指南 | 5489 篇指南 | 4495 篇 API 参考 | 452 篇 + 186 代码仓库 |
-| 适用 | "底部页签设计规范""暗色模式色彩""折叠屏适配" | "AVPlayer 怎么初始化" | "AudioCapturer 方法签名" | "长列表丢帧优化" |
+| 适用 | "底部页签设计规范""暗色模式色彩" | "AVPlayer 怎么初始化" | "AudioCapturer 方法签名" | "长列表丢帧优化""组件复用范例" |
 
-四者并列:本服务定设计规范、guides 讲 API 用法、api-references 查精确签名、best-practices 给场景实践。
+四者并列:ui-design-guides 定设计规范、guides 讲 API 用法、api-references 查精确签名、best-practices 给场景实践与参考代码。
+
+## 四者并列使用(opencode 示例)
+
+```json
+{
+  "mcp": {
+    "harmonyos-best-practices": {
+      "type": "local",
+      "command": ["npx", "-y", "harmonyos-best-practices-mcp"]
+    },
+    "harmonyos-guides": {
+      "type": "local",
+      "command": ["npx", "-y", "harmonyos-guides-mcp"]
+    },
+    "harmonyos-api-references": {
+      "type": "local",
+      "command": ["npx", "-y", "harmonyos-api-references-mcp"]
+    },
+    "harmonyos-ui-design-guides": {
+      "type": "local",
+      "command": ["npx", "-y", "harmonyos-ui-design-guides-mcp"]
+    }
+  }
+}
+```
+
+搭配各自的 Skill(`harmonyos-best-practices` / `harmonyos-guides` / `harmonyos-api-references` / `harmonyos-ui-design-guides`),AI 可据需求选用:guides 查 API 用法、best-practices 查场景实践与参考代码、api-references 查精确签名、ui-design-guides 查设计规范。
 
 ## 快速开始(最终用户)
 
