@@ -27,7 +27,8 @@
   "mcp": {
     "harmonyos-best-practices": {
       "type": "local",
-      "command": ["npx", "-y", "harmonyos-best-practices-mcp"]
+      "command": ["npx", "-y", "harmonyos-best-practices-mcp"],
+      "environment": { "BP_CODE_DIR": "/abs/path/to/best_practices_code" }
     },
     "harmonyos-guides": {
       "type": "local",
@@ -45,9 +46,11 @@
 }
 ```
 
+> **`BP_CODE_DIR`(仅 best-practices 可选)**:指向本地 `best_practices_code/` 目录(从 GitHub Release 下载 `harmonyos-best-practices-code.tar.gz` 解压得到)。配置后 `get_code_example` 会返回本地仓库路径与入口 `.ets` 文件,AI 可直接读取真实官方示例代码;**不配则只返回 gitcode 远程 URL**。Windows 路径用正斜杠更稳(如 `C:/path/to/best_practices_code`)。其余三个 MCP 是纯文档,无需此变量。
+
 搭配各自的 Skill(`harmonyos-best-practices` / `harmonyos-guides` / `harmonyos-api-references` / `harmonyos-ui-design-guides`),AI 可据需求选用:guides 查 API 用法、best-practices 查场景实践与参考代码、api-references 查精确签名、ui-design-guides 查设计规范。
 
-## 快速开始(最终用户)
+## 快速开始
 
 ### 1. 装 MCP 服务器
 
