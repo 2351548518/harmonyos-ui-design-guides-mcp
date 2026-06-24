@@ -1,0 +1,51 @@
+{
+  "name": "harmonyos-ui-design-guides-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing HarmonyOS UI design guides (166 docs) for design-spec lookup during development.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "harmonyos-ui-design-guides-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "node scripts/copy-data.mjs && npm run build",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
+    "selfcheck": "node scripts/selfcheck.mjs"
+  },
+  "keywords": [
+    "harmonyos",
+    "harmony",
+    "ui-design",
+    "design-guidelines",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "author": "2351548518",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2351548518/harmonyos-ui-design-guides-mcp.git"
+  },
+  "homepage": "https://github.com/2351548518/harmonyos-ui-design-guides-mcp",
+  "bugs": {
+    "url": "https://github.com/2351548518/harmonyos-ui-design-guides-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

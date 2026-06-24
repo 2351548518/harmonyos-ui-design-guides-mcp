@@ -1,0 +1,181 @@
+# UI 设计指南文档索引 (design-guides)
+
+> 共 166 篇，目录 `Harmonyos_UI_design-guides_docs/`。文件名即文档 slug（fileName）。
+
+- **通用设计基础**
+  - `design-concepts-0000001795698445.md` — 设计理念
+  - `visual_design-0000001823497081.md` — 视觉风格
+    - `color-0000001776857164.md` — 色彩
+    - `font-0000001828772001.md` — 鸿蒙黑体
+    - `typography-0000002622688363.md` — 文本排版
+    - `application-icon-0000001953444009.md` — 应用图标
+    - `system-icons-0000001929854962.md` — HarmonyOS Symbol
+    - `immersivelight-0000002612101053.md` — 沉浸光感
+    - `corner-radius-parameter-0000002556468705.md` — 圆角参数
+    - `interval-parameter-0000002562577161.md` — 间隔参数
+  - `design-layout-0000001748539680.md` — 布局
+    - `design-layout-basics-0000001795579413.md` — 布局基础
+    - `design-responsive-layout-structure-0000001748539684.md` — 响应式应用架构
+    - `design-responsive-layout-method-0000001795698449.md` — 响应式布局方法
+  - `design-animation-0000001750078484.md` — 动效
+    - `design-animation-overview-0000001750985338.md` — 概述
+    - `animation-design-principles-0000001750237392.md` — 设计原则
+    - `animation-attributes-0000001797117229.md` — 动效属性
+    - `transition-animation-0000001750078488.md` — 转场动效
+    - `gesture-animation-0000001797038213.md` — 手势动效
+  - `design-ui-language-0000001795698453.md` — 界面用语
+  - `design-globalization-0000001748539688.md` — 全球化
+  - `privacy-0000001929972682.md` — 隐私
+- **控件**
+  - `general_overview-0000001929599380.md` — 概览
+  - `component_navigation-0000001929763488.md` — 导航类
+    - `bottomtab-0000001956787789.md` — 底部页签
+    - `chipsgroup-0000001929788350.md` — 子页签
+    - `titlebar-0000001929628982.md` — 标题栏
+    - `swiper-0000001956947629.md` — 导航点
+  - `component_view-0000001929604116.md` — 展示类
+    - `text-0000001956975261.md` — 文本
+    - `divider-0000001956815469.md` — 分隔器
+    - `subheader-0000001929816012.md` — 子标题
+    - `progress-0000001929656644.md` — 进度条
+    - `alphabetindexer-0000001956975265.md` — 索引条
+    - `scrollbar-0000001956815473.md` — 滚动条
+    - `badge-0000001929816016.md` — 新事件标记
+    - `toast-0000001929656648.md` — 即时反馈
+    - `component_snackbar-0000002340726169.md` — 即时操作
+    - `popup-0000001956975269.md` — 气泡提示
+    - `datapanel-0000001956815481.md` — 数据可视化
+    - `qrcode-0000001929816020.md` — 二维码
+    - `textclock-0000001929656652.md` — 文本时钟
+    - `image-0000001956975273.md` — 图片
+    - `blank-0000001956815485.md` — 空白
+  - `component_controls-0000001956922769.md` — 操作类
+    - `button-0000001929683228.md` — 按钮
+    - `select-0000001957001873.md` — 下拉按钮
+    - `togglebutton-0000001956842045.md` — 状态按钮
+    - `chips-0000001929842624.md` — 操作块
+    - `toolbar-0000001929683232.md` — 工具栏
+    - `component_actionbar-0000002306891560.md` — 核心操作栏
+    - `menu-0000001957001877.md` — 菜单
+    - `textselection-0000001956842049.md` — 文本选择菜单
+  - `component_input-0000001956762929.md` — 输入类
+    - `textinput-0000001957012557.md` — 文本框
+    - `search-0000001956852741.md` — 搜索框
+    - `counter-0000001929853284.md` — 数字加减
+    - `patternlock-0000001929853902.md` — 图案锁
+  - `component_selection-0000001929763496.md` — 选择类
+    - `checkbox-0000001957012561.md` — 勾选
+    - `toggleswitch-0000001956852745.md` — 开关
+    - `radio-0000001929853288.md` — 单选框
+    - `rating-0000001929853906.md` — 评分条
+    - `slider-0000001957012565.md` — 滑动条
+    - `picker-0000001956852749.md` — 选择器
+    - `color-picker-0000002574393143.md` — 色彩选择器
+    - `segmentbutton-0000001929853292.md` — 分段按钮
+  - `component_container-0000001929604124.md` — 容器类
+    - `list-0000001929853910.md` — 列表
+    - `dialog-0000001957012569.md` — 弹出框
+    - `bindsheet-0000001956852753.md` — 半模态面板
+- **人机交互**
+  - `hmi-overview-0000001795410269.md` — 概述
+  - `hmi-touchscreen-0000001928273206.md` — 手势
+  - `hmi-cursor-0000001795531205.md` — 光标交互
+  - `hmi-focus-0000001748650376.md` — 焦点导航
+  - `hmi-mouse-0000001930021626.md` — 鼠标
+  - `hmi-keyboard-0000001928070488.md` — 键盘
+  - `hmi-touchpad-0000002464444730.md` — 触控板
+  - `hmi-scenes-0000001748650380.md` — 常用交互
+    - `hmi-scenes-drag-0000001795410277.md` — 拖拽
+    - `hmi-scenes-selection-0000001957005521.md` — 框选
+  - `hmi-interaction-events-0000001795531217.md` — 交互事件归一
+- **系统特性&能力**
+  - `system-features-0000001826860773.md` — 系统特性
+    - `navigation-0000001957075737.md` — 导航条
+    - `system-features-notification-0000001793074217.md` — 通知
+    - `system-features-live-view-0000001955186861.md` — 实况窗
+    - `system-features-multi-window-interaction-0000001795392917.md` — 多窗口交互
+    - `floatview-0000002624640357.md` — 闪控球和闪控窗
+    - `system-features-service-widget-0000002087671904.md` — 服务卡片
+    - `pip-0000001927422624.md` — 画中画
+    - `dark-mode-0000001823255497.md` — 深色模式
+    - `status-bar-0000001776775568.md` — 状态栏
+    - `broadcasting-control-0000001957017133.md` — 播控中心
+    - `shortcat-0000002550987962.md` — 桌面快捷方式
+  - `system-capabilities-0000001780261034.md` — 系统能力
+    - `share-0000001957076313.md` — 分享
+    - `id-0000001880001344.md` — 华为账号开放登录
+    - `huaweipay-0000002054558905.md` — 华为支付
+    - `preview-0000001957112409.md` — 预览
+    - `system-capabilities-launch-page-0000002311335748.md` — 启动页
+    - `onehop-0000002354602581.md` — 碰一碰
+    - `i-connect-0000002354482789.md` — 靠近发现
+    - `smart-reachability-0000002556657823.md` — 智感握姿
+    - `parallel_view-0000002588655180.md` — 平行视界
+- **元服务设计**
+  - `ux-guidelines-overview-0000001938867005.md` — 概述
+  - `ux-guidelines-overview-0000001939135629.md` — 元服务基本要素
+    - `ux-guidelines-overview-0000001900384976.md` — 基础信息
+    - `ux-guidelines-overview-0000001939144821.md` — 服务卡片
+  - `ux-guidelines-overview-0000001900218352.md` — 元服务体验场景
+  - `ux-guidelines-overview-0000001900378248.md` — 设计原则
+    - `ux-guidelines-overview-0000001900422910.md` — 通用友好
+    - `ux-guidelines-overview-0000001939183197.md` — 轻量高效
+    - `ux-guidelines-overview-0000001900424082.md` — 简洁高级
+    - `ux-guidelines-overview-0000001900584166.md` — 安全可靠
+  - `best-practices-0000002004044485.md` — 最佳设计实践
+    - `accounts-0000001967444380.md` — 账号
+- **针对多设备设计**
+  - `phone-0000001776694632.md` — 手机
+  - `folding-screen-0000001929865346.md` — 折叠屏
+    - `design-principles-0000001957023989.md` — 设计原则
+    - `foldable-0000002352875141.md` — 双折叠
+    - `trifold-0000002352915021.md` — 三折叠
+    - `flip-0000002321233974.md` — 阔折叠
+  - `pad-0000001823654157.md` — 平板
+  - `2in1-0000001777531700.md` — 电脑
+    - `concept-0000002353669657.md` — 设计概述
+    - `window-0000002321868010.md` — 窗口框架
+    - `app-design-0000002353509845.md` — 应用设计
+    - `statusbar-0000002319710910.md` — 应用接入状态栏
+    - `foldable-pc-0000002322600098.md` — 折叠电脑
+  - `smart-cockpit-0000002045925712.md` — 智能座舱
+    - `smart-cockpit-overview-0000002592486432.md` — 概述
+    - `smart-cockpit-basic-experience-0000002592646356.md` — 基础体验要求
+    - `smart-cockpit-ux-basic-0000002622965869.md` — 设计基础
+    - `smart-cockpit-system-architecture-0000002623086005.md` — 系统架构
+    - `smart-cockpit-application-architecture-0000002592486434.md` — 应用架构
+    - `smart-cockpit-hicar-0000002592646358.md` — HUAWEI HiCar
+  - `wearable-0000002164711032.md` — 智能穿戴
+    - `wearable-overview-0000002197410498.md` — 概述
+    - `application-architecture-0000002202799801.md` — 应用架构
+    - `human-machine-interaction-0000002167648022.md` — 人机交互
+    - `spacing-parameters-0000002202912577.md` — 间隔参数
+  - `vision-0000002321377950.md` — 智慧屏
+- **应用设计最佳实践**
+  - `practices-overview-0000001746498066.md` — 概述
+  - `responsive-design-examples1-0000001957369849.md` — 影音娱乐类
+  - `responsive-design-examples2-0000001793536901.md` — 社交通讯类
+  - `responsive-design-examples3-0000001746498074.md` — 拍摄美化类
+  - `responsive-design-examples4-0000001746657290.md` — 新闻阅读类
+  - `responsive-design-examples5-0000001930419478.md` — 电商购物类
+  - `responsive-design-examples6-0000001793536905.md` — 金融理财类
+  - `convenient-life-0000001957252465.md` — 便捷生活类
+  - `tourist-accommodation-0000001957241545.md` — 旅游住宿类
+  - `travel-and-navigation-0000001957391017.md` — 出行导航类
+  - `mobile-payment-0000001957421613.md` — 移动支付类
+  - `games-0000001930189974.md` — 游戏类
+  - `cars-0000001930233436.md` — 汽车类
+  - `office-0000002315825496.md` — 办公类
+- **应用 UX 体验标准**
+  - `ux-guidelines-overview-0000001760867048.md` — 概述
+  - `ux-guidelines-general-0000001760708152.md` — 通用应用 UX 体验标准
+  - `ux-guidelines-large-screen-0000001807707561.md` — 大屏应用 UX 体验标准
+  - `ux-guidelines-foldable-screen-0000001807866557.md` — 折叠屏应用 UX 体验标准
+  - `ux-guidelines-2in1-0000001777895636.md` — 电脑应用 UX 体验标准
+  - `ux-guidelines-vision-0000002360813381.md` — 智慧屏应用 UX 体验标准
+  - `ux-standard-overview-0000002019655177.md` — 元服务 UX 体验标准
+  - `ux-guidelines-wearable-0000002503475023.md` — 智能穿戴应用 UX 体验标准
+- **变更说明**
+  - `whats-new-0000002189266636.md` — 变更说明
+
+> 共计 166 篇文档。

@@ -1,0 +1,166 @@
+OK	design-concepts-0000001795698445	通用设计基础 / 设计理念
+OK	visual_design-0000001823497081	通用设计基础 / 视觉风格
+OK	color-0000001776857164	通用设计基础 / 视觉风格 / 色彩
+OK	font-0000001828772001	通用设计基础 / 视觉风格 / 鸿蒙黑体
+OK	typography-0000002622688363	通用设计基础 / 视觉风格 / 文本排版
+OK	application-icon-0000001953444009	通用设计基础 / 视觉风格 / 应用图标
+OK	system-icons-0000001929854962	通用设计基础 / 视觉风格 / HarmonyOS Symbol
+OK	immersivelight-0000002612101053	通用设计基础 / 视觉风格 / 沉浸光感
+OK	corner-radius-parameter-0000002556468705	通用设计基础 / 视觉风格 / 圆角参数
+OK	interval-parameter-0000002562577161	通用设计基础 / 视觉风格 / 间隔参数
+OK	design-layout-0000001748539680	通用设计基础 / 布局
+OK	design-layout-basics-0000001795579413	通用设计基础 / 布局 / 布局基础
+OK	design-responsive-layout-structure-0000001748539684	通用设计基础 / 布局 / 响应式应用架构
+OK	design-responsive-layout-method-0000001795698449	通用设计基础 / 布局 / 响应式布局方法
+OK	design-animation-0000001750078484	通用设计基础 / 动效
+OK	design-animation-overview-0000001750985338	通用设计基础 / 动效 / 概述
+OK	animation-design-principles-0000001750237392	通用设计基础 / 动效 / 设计原则
+OK	animation-attributes-0000001797117229	通用设计基础 / 动效 / 动效属性
+OK	transition-animation-0000001750078488	通用设计基础 / 动效 / 转场动效
+OK	gesture-animation-0000001797038213	通用设计基础 / 动效 / 手势动效
+OK	design-ui-language-0000001795698453	通用设计基础 / 界面用语
+OK	design-globalization-0000001748539688	通用设计基础 / 全球化
+OK	privacy-0000001929972682	通用设计基础 / 隐私
+OK	general_overview-0000001929599380	控件 / 概览
+OK	component_navigation-0000001929763488	控件 / 导航类
+OK	bottomtab-0000001956787789	控件 / 导航类 / 底部页签
+OK	chipsgroup-0000001929788350	控件 / 导航类 / 子页签
+OK	titlebar-0000001929628982	控件 / 导航类 / 标题栏
+OK	swiper-0000001956947629	控件 / 导航类 / 导航点
+OK	component_view-0000001929604116	控件 / 展示类
+OK	text-0000001956975261	控件 / 展示类 / 文本
+OK	divider-0000001956815469	控件 / 展示类 / 分隔器
+OK	subheader-0000001929816012	控件 / 展示类 / 子标题
+OK	progress-0000001929656644	控件 / 展示类 / 进度条
+OK	alphabetindexer-0000001956975265	控件 / 展示类 / 索引条
+OK	scrollbar-0000001956815473	控件 / 展示类 / 滚动条
+OK	badge-0000001929816016	控件 / 展示类 / 新事件标记
+OK	toast-0000001929656648	控件 / 展示类 / 即时反馈
+OK	component_snackbar-0000002340726169	控件 / 展示类 / 即时操作
+OK	popup-0000001956975269	控件 / 展示类 / 气泡提示
+OK	datapanel-0000001956815481	控件 / 展示类 / 数据可视化
+OK	qrcode-0000001929816020	控件 / 展示类 / 二维码
+OK	textclock-0000001929656652	控件 / 展示类 / 文本时钟
+OK	image-0000001956975273	控件 / 展示类 / 图片
+OK	blank-0000001956815485	控件 / 展示类 / 空白
+OK	component_controls-0000001956922769	控件 / 操作类
+OK	button-0000001929683228	控件 / 操作类 / 按钮
+OK	select-0000001957001873	控件 / 操作类 / 下拉按钮
+OK	togglebutton-0000001956842045	控件 / 操作类 / 状态按钮
+OK	chips-0000001929842624	控件 / 操作类 / 操作块
+OK	toolbar-0000001929683232	控件 / 操作类 / 工具栏
+OK	component_actionbar-0000002306891560	控件 / 操作类 / 核心操作栏
+OK	menu-0000001957001877	控件 / 操作类 / 菜单
+OK	textselection-0000001956842049	控件 / 操作类 / 文本选择菜单
+OK	component_input-0000001956762929	控件 / 输入类
+OK	textinput-0000001957012557	控件 / 输入类 / 文本框
+OK	search-0000001956852741	控件 / 输入类 / 搜索框
+OK	counter-0000001929853284	控件 / 输入类 / 数字加减
+OK	patternlock-0000001929853902	控件 / 输入类 / 图案锁
+OK	component_selection-0000001929763496	控件 / 选择类
+OK	checkbox-0000001957012561	控件 / 选择类 / 勾选
+OK	toggleswitch-0000001956852745	控件 / 选择类 / 开关
+OK	radio-0000001929853288	控件 / 选择类 / 单选框
+OK	rating-0000001929853906	控件 / 选择类 / 评分条
+OK	slider-0000001957012565	控件 / 选择类 / 滑动条
+OK	picker-0000001956852749	控件 / 选择类 / 选择器
+OK	color-picker-0000002574393143	控件 / 选择类 / 色彩选择器
+OK	segmentbutton-0000001929853292	控件 / 选择类 / 分段按钮
+OK	component_container-0000001929604124	控件 / 容器类
+OK	list-0000001929853910	控件 / 容器类 / 列表
+OK	dialog-0000001957012569	控件 / 容器类 / 弹出框
+OK	bindsheet-0000001956852753	控件 / 容器类 / 半模态面板
+OK	hmi-overview-0000001795410269	人机交互 / 概述
+OK	hmi-touchscreen-0000001928273206	人机交互 / 手势
+OK	hmi-cursor-0000001795531205	人机交互 / 光标交互
+OK	hmi-focus-0000001748650376	人机交互 / 焦点导航
+OK	hmi-mouse-0000001930021626	人机交互 / 鼠标
+OK	hmi-keyboard-0000001928070488	人机交互 / 键盘
+OK	hmi-touchpad-0000002464444730	人机交互 / 触控板
+OK	hmi-scenes-0000001748650380	人机交互 / 常用交互
+OK	hmi-scenes-drag-0000001795410277	人机交互 / 常用交互 / 拖拽
+OK	hmi-scenes-selection-0000001957005521	人机交互 / 常用交互 / 框选
+OK	hmi-interaction-events-0000001795531217	人机交互 / 交互事件归一
+OK	system-features-0000001826860773	系统特性&能力 / 系统特性
+OK	navigation-0000001957075737	系统特性&能力 / 系统特性 / 导航条
+OK	system-features-notification-0000001793074217	系统特性&能力 / 系统特性 / 通知
+OK	system-features-live-view-0000001955186861	系统特性&能力 / 系统特性 / 实况窗
+OK	system-features-multi-window-interaction-0000001795392917	系统特性&能力 / 系统特性 / 多窗口交互
+OK	floatview-0000002624640357	系统特性&能力 / 系统特性 / 闪控球和闪控窗
+OK	system-features-service-widget-0000002087671904	系统特性&能力 / 系统特性 / 服务卡片
+OK	pip-0000001927422624	系统特性&能力 / 系统特性 / 画中画
+OK	dark-mode-0000001823255497	系统特性&能力 / 系统特性 / 深色模式
+OK	status-bar-0000001776775568	系统特性&能力 / 系统特性 / 状态栏
+OK	broadcasting-control-0000001957017133	系统特性&能力 / 系统特性 / 播控中心
+OK	shortcat-0000002550987962	系统特性&能力 / 系统特性 / 桌面快捷方式
+OK	system-capabilities-0000001780261034	系统特性&能力 / 系统能力
+OK	share-0000001957076313	系统特性&能力 / 系统能力 / 分享
+OK	id-0000001880001344	系统特性&能力 / 系统能力 / 华为账号开放登录
+OK	huaweipay-0000002054558905	系统特性&能力 / 系统能力 / 华为支付
+OK	preview-0000001957112409	系统特性&能力 / 系统能力 / 预览
+OK	system-capabilities-launch-page-0000002311335748	系统特性&能力 / 系统能力 / 启动页
+OK	onehop-0000002354602581	系统特性&能力 / 系统能力 / 碰一碰
+OK	i-connect-0000002354482789	系统特性&能力 / 系统能力 / 靠近发现
+OK	smart-reachability-0000002556657823	系统特性&能力 / 系统能力 / 智感握姿
+OK	parallel_view-0000002588655180	系统特性&能力 / 系统能力 / 平行视界
+OK	ux-guidelines-overview-0000001938867005	元服务设计 / 概述
+OK	ux-guidelines-overview-0000001939135629	元服务设计 / 元服务基本要素
+OK	ux-guidelines-overview-0000001900384976	元服务设计 / 元服务基本要素 / 基础信息
+OK	ux-guidelines-overview-0000001939144821	元服务设计 / 元服务基本要素 / 服务卡片
+OK	ux-guidelines-overview-0000001900218352	元服务设计 / 元服务体验场景
+OK	ux-guidelines-overview-0000001900378248	元服务设计 / 设计原则
+OK	ux-guidelines-overview-0000001900422910	元服务设计 / 设计原则 / 通用友好
+OK	ux-guidelines-overview-0000001939183197	元服务设计 / 设计原则 / 轻量高效
+OK	ux-guidelines-overview-0000001900424082	元服务设计 / 设计原则 / 简洁高级
+OK	ux-guidelines-overview-0000001900584166	元服务设计 / 设计原则 / 安全可靠
+OK	best-practices-0000002004044485	元服务设计 / 最佳设计实践
+OK	accounts-0000001967444380	元服务设计 / 最佳设计实践 / 账号
+OK	phone-0000001776694632	针对多设备设计 / 手机
+OK	folding-screen-0000001929865346	针对多设备设计 / 折叠屏
+OK	design-principles-0000001957023989	针对多设备设计 / 折叠屏 / 设计原则
+OK	foldable-0000002352875141	针对多设备设计 / 折叠屏 / 双折叠
+OK	trifold-0000002352915021	针对多设备设计 / 折叠屏 / 三折叠
+OK	flip-0000002321233974	针对多设备设计 / 折叠屏 / 阔折叠
+OK	pad-0000001823654157	针对多设备设计 / 平板
+OK	2in1-0000001777531700	针对多设备设计 / 电脑
+OK	concept-0000002353669657	针对多设备设计 / 电脑 / 设计概述
+OK	window-0000002321868010	针对多设备设计 / 电脑 / 窗口框架
+OK	app-design-0000002353509845	针对多设备设计 / 电脑 / 应用设计
+OK	statusbar-0000002319710910	针对多设备设计 / 电脑 / 应用接入状态栏
+OK	foldable-pc-0000002322600098	针对多设备设计 / 电脑 / 折叠电脑
+OK	smart-cockpit-0000002045925712	针对多设备设计 / 智能座舱
+OK	smart-cockpit-overview-0000002592486432	针对多设备设计 / 智能座舱 / 概述
+OK	smart-cockpit-basic-experience-0000002592646356	针对多设备设计 / 智能座舱 / 基础体验要求
+OK	smart-cockpit-ux-basic-0000002622965869	针对多设备设计 / 智能座舱 / 设计基础
+OK	smart-cockpit-system-architecture-0000002623086005	针对多设备设计 / 智能座舱 / 系统架构
+OK	smart-cockpit-application-architecture-0000002592486434	针对多设备设计 / 智能座舱 / 应用架构
+OK	smart-cockpit-hicar-0000002592646358	针对多设备设计 / 智能座舱 / HUAWEI HiCar
+OK	wearable-0000002164711032	针对多设备设计 / 智能穿戴
+OK	wearable-overview-0000002197410498	针对多设备设计 / 智能穿戴 / 概述
+OK	application-architecture-0000002202799801	针对多设备设计 / 智能穿戴 / 应用架构
+OK	human-machine-interaction-0000002167648022	针对多设备设计 / 智能穿戴 / 人机交互
+OK	spacing-parameters-0000002202912577	针对多设备设计 / 智能穿戴 / 间隔参数
+OK	vision-0000002321377950	针对多设备设计 / 智慧屏
+OK	practices-overview-0000001746498066	应用设计最佳实践 / 概述
+OK	responsive-design-examples1-0000001957369849	应用设计最佳实践 / 影音娱乐类
+OK	responsive-design-examples2-0000001793536901	应用设计最佳实践 / 社交通讯类
+OK	responsive-design-examples3-0000001746498074	应用设计最佳实践 / 拍摄美化类
+OK	responsive-design-examples4-0000001746657290	应用设计最佳实践 / 新闻阅读类
+OK	responsive-design-examples5-0000001930419478	应用设计最佳实践 / 电商购物类
+OK	responsive-design-examples6-0000001793536905	应用设计最佳实践 / 金融理财类
+OK	convenient-life-0000001957252465	应用设计最佳实践 / 便捷生活类
+OK	tourist-accommodation-0000001957241545	应用设计最佳实践 / 旅游住宿类
+OK	travel-and-navigation-0000001957391017	应用设计最佳实践 / 出行导航类
+OK	mobile-payment-0000001957421613	应用设计最佳实践 / 移动支付类
+OK	games-0000001930189974	应用设计最佳实践 / 游戏类
+OK	cars-0000001930233436	应用设计最佳实践 / 汽车类
+OK	office-0000002315825496	应用设计最佳实践 / 办公类
+OK	ux-guidelines-overview-0000001760867048	应用 UX 体验标准 / 概述
+OK	ux-guidelines-general-0000001760708152	应用 UX 体验标准 / 通用应用 UX 体验标准
+OK	ux-guidelines-large-screen-0000001807707561	应用 UX 体验标准 / 大屏应用 UX 体验标准
+OK	ux-guidelines-foldable-screen-0000001807866557	应用 UX 体验标准 / 折叠屏应用 UX 体验标准
+OK	ux-guidelines-2in1-0000001777895636	应用 UX 体验标准 / 电脑应用 UX 体验标准
+OK	ux-guidelines-vision-0000002360813381	应用 UX 体验标准 / 智慧屏应用 UX 体验标准
+OK	ux-standard-overview-0000002019655177	应用 UX 体验标准 / 元服务 UX 体验标准
+OK	ux-guidelines-wearable-0000002503475023	应用 UX 体验标准 / 智能穿戴应用 UX 体验标准
+OK	whats-new-0000002189266636	变更说明 / 变更说明

@@ -1,0 +1,21 @@
+# 依赖
+node_modules/
+**/node_modules/
+
+# 构建产物 / prepack 生成的包内副本(不进 git;发布时由 prepack 重新生成)
+harmonyos-ui-design-guides-mcp/dist/
+harmonyos-ui-design-guides-mcp/data/
+**/build/
+**/.cxx/
+**/oh_modules/
+
+# 数据源(不推 git;166 篇设计指南已随 npm 包)
+Harmonyos_UI_design-guides_docs/
+
+# 日志/临时
+*.log
+.claude/
+
+# 系统文件
+.DS_Store
+Thumbs.db
