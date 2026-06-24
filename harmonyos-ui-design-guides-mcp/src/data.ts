@@ -26,15 +26,17 @@ function defaultPaths() {
   const dataDir = path.join(root, "data");
   return {
     docsDir: process.env.BP_DOCS_DIR || path.join(dataDir, "docs"),
+    // Crawler log (status \t docId \t "Lvl1 / ... / leaf"), drives categorization.
+    // Lives at data/ root (sibling of INDEX.md), not under docs/.
+    logFile: process.env.BP_LOG || path.join(dataDir, "index_log.txt"),
   };
 }
 
 const SEP = " / ";
 
 /** Parse index_log.txt: status \t docId \t "Lvl1 / Lvl2 / ... / leaf" */
-function parseIndexLog(docsDir: string): Map<string, DocMeta> {
+function parseIndexLog(logFile: string): Map<string, DocMeta> {
   const docs = new Map<string, DocMeta>();
-  const logFile = path.join(docsDir, "index_log.txt");
   if (!fs.existsSync(logFile)) return docs;
   const text = fs.readFileSync(logFile, "utf8");
   for (const raw of text.split(/\r?\n/)) {
@@ -55,7 +57,7 @@ let _store: DataStore | null = null;
 
 export function getStore(): DataStore {
   if (_store) return _store;
-  const { docsDir } = defaultPaths();
+  const { docsDir, logFile } = defaultPaths();
   if (!fs.existsSync(docsDir)) {
     throw new Error(
       `文档目录不存在: ${docsDir}\n` +
@@ -63,7 +65,15 @@ export function getStore(): DataStore {
         `或通过环境变量 BP_DOCS_DIR 指向资料目录。`
     );
   }
-  const docs = parseIndexLog(docsDir);
+  if (!fs.existsSync(logFile)) {
+    throw new Error(
+      `分类日志不存在: ${logFile}\n` +
+        `该文件驱动文档分类,缺失会导致全部文档落入"未分类"。\n` +
+        `若从源码运行,请先执行 npm run prepack 拷贝数据到 data/;\n` +
+        `或通过环境变量 BP_LOG 指向 index_log.txt。`
+    );
+  }
+  const docs = parseIndexLog(logFile);
 
   const topics = new Map<string, string[]>();
   for (const meta of docs.values()) {
