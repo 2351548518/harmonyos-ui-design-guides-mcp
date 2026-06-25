@@ -16,9 +16,11 @@
 
 | 工具 | 作用 |
 |------|------|
-| `search_design_guides({query, limit?})` | 全文检索设计指南(中文友好),返回相关度排序的文档列表(含标题、分类路径) |
+| `search_design_guides({query, limit?})` | 全文检索设计指南(BM25 + CJK 权重 + 同义词扩展,中文友好),返回相关度排序的文档列表(含标题、分类路径) |
 | `get_design_guide({name})` | 读取指定设计指南(docId)的完整 Markdown 正文 |
 | `list_design_guides_by_topic({topic?})` | 按分类路径浏览;支持多级下钻(如 `控件` → `控件 / 导航类`) |
+
+**检索算法**:BM25 排序(TF 饱和 + 文档长度归一化 + IDF)→ CJK 单字×0.3 / 双字 bigram×0.5 降权(抑制跨词边界噪声)→ 域内同义词软 OR 扩展(`data/synonyms.json` 驱动,如 弹窗↔弹出框↔dialog)。同义词词典数据驱动,编辑 JSON 即可扩展,无需改代码。
 
 数据规模:166 篇设计指南,9 个顶级类——控件(49)、针对多设备设计(26)、通用设计基础(23)、系统特性&能力(22)、应用设计最佳实践(14)、元服务设计(12)、人机交互(11)、应用 UX 体验标准(8)、变更说明(1)。
 
@@ -31,20 +33,20 @@
   "mcp": {
     "harmonyos-best-practices": {
       "type": "local",
-      "command": ["npx", "-y", "harmonyos-best-practices-mcp"],
+      "command": ["npx", "-y", "harmonyos-best-practices-mcp@latest"],
       "environment": { "BP_CODE_DIR": "/abs/path/to/best_practices_code" }
     },
     "harmonyos-guides": {
       "type": "local",
-      "command": ["npx", "-y", "harmonyos-guides-mcp"]
+      "command": ["npx", "-y", "harmonyos-guides-mcp@latest"]
     },
     "harmonyos-api-references": {
       "type": "local",
-      "command": ["npx", "-y", "harmonyos-api-references-mcp"]
+      "command": ["npx", "-y", "harmonyos-api-references-mcp@latest"]
     },
     "harmonyos-ui-design-guides": {
       "type": "local",
-      "command": ["npx", "-y", "harmonyos-ui-design-guides-mcp"]
+      "command": ["npx", "-y", "harmonyos-ui-design-guides-mcp@latest"]
     }
   }
 }
@@ -57,20 +59,20 @@
   "mcpServers": {
     "harmonyos-best-practices": {
       "command": "npx",
-      "args": ["-y", "harmonyos-best-practices-mcp"],
+      "args": ["-y", "harmonyos-best-practices-mcp@latest"],
       "env": { "BP_CODE_DIR": "/abs/path/to/best_practices_code" }
     },
     "harmonyos-guides": {
       "command": "npx",
-      "args": ["-y", "harmonyos-guides-mcp"]
+      "args": ["-y", "harmonyos-guides-mcp@latest"]
     },
     "harmonyos-api-references": {
       "command": "npx",
-      "args": ["-y", "harmonyos-api-references-mcp"]
+      "args": ["-y", "harmonyos-api-references-mcp@latest"]
     },
     "harmonyos-ui-design-guides": {
       "command": "npx",
-      "args": ["-y", "harmonyos-ui-design-guides-mcp"]
+      "args": ["-y", "harmonyos-ui-design-guides-mcp@latest"]
     }
   }
 }
@@ -91,7 +93,7 @@
   "mcpServers": {
     "harmonyos-ui-design-guides": {
       "command": "npx",
-      "args": ["-y", "harmonyos-ui-design-guides-mcp"]
+      "args": ["-y", "harmonyos-ui-design-guides-mcp@latest"]
     }
   }
 }
@@ -104,6 +106,19 @@
 | 变量 | 默认 | 说明 |
 |------|------|------|
 | `BP_DOCS_DIR` | 包内 `data/docs` | 文档目录(一般无需改) |
+| `BP_LOG` | 包内 `data/index_log.txt` | 分类日志(驱动文档分类,缺失会报错;一般无需改) |
+
+> `data/synonyms.json` 为同义词词典(随包),缺失时检索退化为无同义词扩展,不影响正常使用。`data/INDEX.md` 是人读文档索引(代码不读)。
+
+### 数据布局(包内 `data/`)
+
+```
+data/
+├── docs/           # 纯 .md 文档(166 篇)
+├── index_log.txt   # 分类日志(机器读,驱动分类)
+├── synonyms.json   # 同义词词典(检索用,可编辑扩展)
+└── INDEX.md        # 人读文档索引(按大类分组,代码不读)
+```
 
 ## 更新
 

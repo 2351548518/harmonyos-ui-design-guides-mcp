@@ -14,6 +14,20 @@ const server = new McpServer({
 
 const SEP = " / ";
 
+/**
+ * Normalize a category path for tolerant prefix matching: strip full/half-width
+ * parenthetical qualifiers from each segment, e.g.
+ * "媒体 / Media Kit（媒体服务）" -> "媒体 / Media Kit".
+ * Lets users drill down without knowing the exact parenthetical suffix.
+ */
+function normPath(p: string): string {
+  return p
+    .split(SEP)
+    .map((seg) => seg.replace(/[(（][^)）]*[)）]/g, "").trim())
+    .join(SEP)
+    .trim();
+}
+
 /* ------------------------------------------------------------------ *
  * Tool 1: search_design_guides
  * ------------------------------------------------------------------ */
@@ -85,10 +99,16 @@ server.tool(
           `\n\n用 list_design_guides_by_topic({topic:"<类名>"}) 下钻查看该类下文档.`
       );
     }
+    // Prefix match: path === topic OR path startsWith "topic / ".
+    // Tolerant of parenthetical qualifiers (Media Kit（媒体服务） -> Media Kit),
+    // so users can drill down without the exact parenthetical suffix.
     const prefix = topic.trim();
+    const normPrefix = normPath(prefix);
     const matched: DocMeta[] = [];
     for (const meta of store.docs.values()) {
       if (meta.path === prefix || meta.path.startsWith(prefix + SEP)) {
+        matched.push(meta);
+      } else if (normPrefix && (normPath(meta.path) === normPrefix || normPath(meta.path).startsWith(normPrefix + SEP))) {
         matched.push(meta);
       }
     }

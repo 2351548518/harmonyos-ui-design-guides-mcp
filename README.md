@@ -29,20 +29,20 @@
   "mcp": {
     "harmonyos-best-practices": {
       "type": "local",
-      "command": ["npx", "-y", "harmonyos-best-practices-mcp"],
+      "command": ["npx", "-y", "harmonyos-best-practices-mcp@latest"],
       "environment": { "BP_CODE_DIR": "/abs/path/to/best_practices_code" }
     },
     "harmonyos-guides": {
       "type": "local",
-      "command": ["npx", "-y", "harmonyos-guides-mcp"]
+      "command": ["npx", "-y", "harmonyos-guides-mcp@latest"]
     },
     "harmonyos-api-references": {
       "type": "local",
-      "command": ["npx", "-y", "harmonyos-api-references-mcp"]
+      "command": ["npx", "-y", "harmonyos-api-references-mcp@latest"]
     },
     "harmonyos-ui-design-guides": {
       "type": "local",
-      "command": ["npx", "-y", "harmonyos-ui-design-guides-mcp"]
+      "command": ["npx", "-y", "harmonyos-ui-design-guides-mcp@latest"]
     }
   }
 }
@@ -55,20 +55,20 @@
   "mcpServers": {
     "harmonyos-best-practices": {
       "command": "npx",
-      "args": ["-y", "harmonyos-best-practices-mcp"],
+      "args": ["-y", "harmonyos-best-practices-mcp@latest"],
       "env": { "BP_CODE_DIR": "/abs/path/to/best_practices_code" }
     },
     "harmonyos-guides": {
       "command": "npx",
-      "args": ["-y", "harmonyos-guides-mcp"]
+      "args": ["-y", "harmonyos-guides-mcp@latest"]
     },
     "harmonyos-api-references": {
       "command": "npx",
-      "args": ["-y", "harmonyos-api-references-mcp"]
+      "args": ["-y", "harmonyos-api-references-mcp@latest"]
     },
     "harmonyos-ui-design-guides": {
       "command": "npx",
-      "args": ["-y", "harmonyos-ui-design-guides-mcp"]
+      "args": ["-y", "harmonyos-ui-design-guides-mcp@latest"]
     }
   }
 }
@@ -91,7 +91,7 @@
   "mcpServers": {
     "harmonyos-ui-design-guides": {
       "command": "npx",
-      "args": ["-y", "harmonyos-ui-design-guides-mcp"]
+      "args": ["-y", "harmonyos-ui-design-guides-mcp@latest"]
     }
   }
 }
@@ -107,9 +107,11 @@
 
 | 工具 | 作用 |
 |------|------|
-| `search_design_guides({query, limit?})` | 全文检索设计指南(中文友好),返回相关度排序的文档列表(含标题、分类路径) |
+| `search_design_guides({query, limit?})` | 全文检索设计指南(BM25 + CJK 权重 + 同义词扩展,中文友好),返回相关度排序的文档列表(含标题、分类路径) |
 | `get_design_guide({name})` | 读取指定设计指南(docId)的完整 Markdown 正文 |
 | `list_design_guides_by_topic({topic?})` | 按分类路径浏览;支持多级下钻(如 `控件` → `控件 / 导航类`) |
+
+**检索算法**:BM25 排序(TF 饱和 + 文档长度归一化 + IDF)→ CJK 单字×0.3 / 双字 bigram×0.5 降权(抑制跨词边界噪声)→ 域内同义词软 OR 扩展(`data/synonyms.json` 驱动,如 弹窗↔弹出框↔dialog、列表↔list)。同义词词典数据驱动,编辑 JSON 即可扩展,无需改代码。
 
 数据规模:166 篇设计指南,9 个顶级类——控件(49)、针对多设备设计(26)、通用设计基础(23)、系统特性&能力(22)、应用设计最佳实践(14)、元服务设计(12)、人机交互(11)、应用 UX 体验标准(8)、变更说明(1)。
 
@@ -175,7 +177,7 @@ npm publish          # 发布到 npm
 
 - **为什么独立 MCP**:设计指南与代码文档(guides/api-references)用途不同——设计指南讲"设计成什么样"(视觉/交互规范),代码文档讲"怎么实现"。独立服务让 AI 能据需求选对检索源,各自的 Skill description 已刻意区分(本服务查"设计"、guides 查"用法"、api-references 查"定义"、best-practices 查"实践")。
 - **多级分类路径**:设计指南路径如 `控件 / 导航类 / 底部页签`,`list_design_guides_by_topic` 支持前缀下钻。
-- **检索打分**:`5×title + 3×path + 3×headings + 1×正文(前200行)`,标题全文预提取。
+- **检索打分**:BM25(TF 饱和 + 文档长度归一化 + IDF),CJK 单字×0.3 / 双字×0.5 降权去跨词噪声,同义词软 OR 扩展(弹窗↔弹出框 等)。标题全文预提取。
 - **文档随包**:166 篇仅 1.7M,随 npm 包,装包即用、零配置。纯文档无代码,无需 Release 附件。
 
 ## 许可
